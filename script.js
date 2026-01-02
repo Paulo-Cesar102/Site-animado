@@ -76,7 +76,6 @@ inView(".footer", () => {
 });
 
 // CARROSSEL INFINITO
-let infinito = 1;
 
 const largura = images[0].clientWidth;
 
@@ -95,12 +94,12 @@ btnNext.addEventListener("click", () => {
     if (index >= images.length - 1) return;
     index++;
     slide.style.transition = "transform 0.4s ease-in-out";
-    slide.style.transform = `translateX(${-largura * (index + infinito)}px)`;
+    slide.style.transform = `translateX(${-largura * (index + index)}px)`;
 });
 
 btnPrev.addEventListener("click", () => {
     if (index <= -infinito) return;
     index--;
     slide.style.transition = "transform 0.4s ease-in-out";
-    slide.style.transform = `translateX(${-largura * (index + infinito)}px)`;
+    slide.style.transform = `translateX(${-largura * (index + index)}px)`;
 });
